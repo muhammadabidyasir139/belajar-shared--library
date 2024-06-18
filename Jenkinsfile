@@ -2,12 +2,14 @@
 
 pipeline {
     agent any
-    stage("Hello Wordl") {
-        steps {
-            script {
-                hello.world()
+    stages{
+        stage("Hello Word") {
+            steps {
+                script {
+                    hello.groovy()
+                }
             }
         }
     }
+    
 }
-
