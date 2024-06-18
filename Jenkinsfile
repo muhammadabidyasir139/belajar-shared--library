@@ -1,5 +1,13 @@
-@Library("belajar-jenkins-shared-library@main") _
+@Library("shared-library-jenkins@main") _
 
-pznPipeline([
-    type: "maven"
-])
+pipeline {
+    agent any
+    stage("Hello Wordl") {
+        steps {
+            script {
+                hello.world()
+            }
+        }
+    }
+}
+
